@@ -7,3 +7,5 @@ RUN \
   && \
   apt-get clean && \
   rm -rf /var/lib/apt/lists/*
+
+ENTRYPOINT [ "glusterd", "--no-daemon", "--log-file=-", "-p", "/var/run/glusterd.pid" ]
